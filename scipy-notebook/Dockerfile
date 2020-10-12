@@ -50,7 +50,7 @@ RUN conda install --quiet --yes \
     'websockets=8.1.*' \
     'kafka-python=2.0.*' \
     'paho-mqtt=1.5.*' \
-    'redis=5.0.*' \
+    'redis-py=2.10.*' \
     'PyMySQL=0.10.*' \
     'elasticsearch-async=6.2.*' \
     && \
@@ -88,3 +88,4 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 USER $NB_UID
 
 WORKDIR $HOME
+ADD macs.tar.gz /opt/conda/lib/python3.8/site-packages/
